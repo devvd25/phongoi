@@ -1,0 +1,129 @@
+# Bản đầy đủ theo thuyết minh: PostgreSQL + Elasticsearch + Redis/Celery + FastAPI + React.
+#   docker compose up -d --build
+#   docker compose exec api python -m app.seed      (tạo dữ liệu mẫu Đà Nẵng)
+# Web: http://localhost:8080   ·   API docs: http://localhost:8000/docs
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: phongoi
+      POSTGRES_PASSWORD: phongoi
+      POSTGRES_DB: phongoi
+    volumes: [pgdata:/var/lib/postgresql/data]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U phongoi -d phongoi"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: [redisdata:/data]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.3
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    volumes: [esdata:/usr/share/elasticsearch/data]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:9200 >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 15s
+
+  api: &backend
+    build: ./backend
+    env_file:
+      - path: ./backend/.env.example
+        required: true
+      - path: ./backend/.env
+        required: false
+      - path: ./.env.docker
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://phongoi:phongoi@postgres:5432/phongoi
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      REDIS_URL: redis://redis:6379/0
+      CRAWLER_DIR: /crawler
+      BACKEND_URL: http://api:8000
+      # Ollama chạy trên máy thật (ngoài Docker)
+      OLLAMA_URL: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./crawler:/crawler
+      - ./cookies:/cookies
+      - uploads:/app/uploads
+    ports: ["8000:8000"]
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3).read()\""]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+  worker:
+    <<: *backend
+    command: celery -A app.worker worker -l info
+    ports: []
+    healthcheck:
+      disable: true
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+
+  beat:
+    <<: *backend
+    command: celery -A app.worker beat -l info -s /tmp/celerybeat-schedule
+    ports: []
+    healthcheck:
+      disable: true
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+
+  web:
+    build: ./frontend
+    ports: ["8080:80"]
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  esdata:
+  redisdata:
+  uploads:

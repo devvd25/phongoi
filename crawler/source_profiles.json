@@ -1,0 +1,818 @@
+[
+  {
+    "id": "phongoi-direct",
+    "name": "Phòng Ơi · Tin chính chủ",
+    "kind": "manual",
+    "connector_type": "first_party",
+    "integration_status": "ready",
+    "start_url": ""
+  },
+  {
+    "id": "phongoi-csv",
+    "name": "Phòng Ơi · Nhập CSV/XLSX",
+    "kind": "manual",
+    "connector_type": "first_party",
+    "integration_status": "ready",
+    "start_url": ""
+  },
+  {
+    "id": "phongoi-webhook",
+    "name": "Phòng Ơi · Webhook đối tác",
+    "kind": "manual",
+    "connector_type": "partner_feed",
+    "integration_status": "ready",
+    "start_url": ""
+  },
+  {
+    "id": "helprent",
+    "name": "HelpRent Da Nang API",
+    "kind": "manual",
+    "connector_type": "rest_api",
+    "integration_status": "ready",
+    "start_url": "https://helprentdanang.com/api/v1/listings/"
+  },
+  {
+    "id": "guland",
+    "name": "Guland · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://guland.vn/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "chothuenha",
+    "name": "ChoThuêNhà · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://chothuenha.com.vn/cho-thue-phong-tro-nha-tro-da-nang"
+  },
+  {
+    "id": "batdongsanonline",
+    "name": "Bất Động Sản Online · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://batdongsanonline.vn/cho-thue-phong-tro-da-nang/"
+  },
+  {
+    "id": "thuenhatro",
+    "name": "Thuê Nhà Trọ · Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://thuenhatro.com.vn/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "bds123",
+    "name": "BDS123 · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://bds123.vn/cho-thue-phong-tro-nha-tro-da-nang.html"
+  },
+  {
+    "id": "soinha",
+    "name": "SoiNhà · Phòng trọ Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://soinha.vn/phong-tro/da-nang"
+  },
+  {
+    "id": "thuephongtro-com",
+    "name": "ThuêPhòngTrọ.com · Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://thuephongtro.com/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "dithuenha",
+    "name": "Đi Thuê Nhà · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://dithuenha.com/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "nhadatcanban",
+    "name": "Nhà Đất Cần Bán · Cho thuê Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://nhadatcanban.com.vn/nha-cho-thue-tai-da-nang"
+  },
+  {
+    "id": "nhatot",
+    "name": "Nhà Tốt Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://www.nhatot.com/thue-phong-tro-da-nang"
+  },
+  {
+    "id": "phongtro123",
+    "name": "Phongtro123 Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://phongtro123.com/tinh-thanh/da-nang"
+  },
+  {
+    "id": "mogi",
+    "name": "Mogi Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://mogi.vn/da-nang/thue-phong-tro-nha-tro"
+  },
+  {
+    "id": "batdongsan",
+    "name": "Batdongsan.com.vn Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "muaban",
+    "name": "Muaban.net Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "legal_review",
+    "start_url": "https://muaban.net/bat-dong-san/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "homedy",
+    "name": "Homedy Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://homedy.com/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "meeyland",
+    "name": "Meeyland Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://meeyland.com/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "phongtro-vn",
+    "name": "Phongtro.vn Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://phongtro.vn/cho-thue-phong-tro-tp-da-nang"
+  },
+  {
+    "id": "bds-com-vn",
+    "name": "BDS.com.vn Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://bds.com.vn/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "tromoi",
+    "name": "Trọ Mới",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://tromoi.com/phong-tro/da-nang"
+  },
+  {
+    "id": "mairent",
+    "name": "Mairent Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://mairent.vn/en/homes/da-nang/apartments"
+  },
+  {
+    "id": "dananghomii",
+    "name": "Danang Homii",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://dananghomii.com/en/"
+  },
+  {
+    "id": "nhadat24h",
+    "name": "Nhadat24h.net Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://nhadat24h.net/cho-thue-nha-tro-da-nang"
+  },
+  {
+    "id": "alonhadat",
+    "name": "Alonhadat Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://alonhadat.com.vn/nha-dat/cho-thue/nha-tro-phong-tro/3/da-nang.html"
+  },
+  {
+    "id": "cafeland",
+    "name": "CafeLand Nhà đất Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://nhadat.cafeland.vn/cho-thue/phong-tro-tai-da-nang/"
+  },
+  {
+    "id": "danangflats",
+    "name": "DanangFlats",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://danangflats.com/"
+  },
+  {
+    "id": "properly",
+    "name": "Properly Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://properly.vn/en"
+  },
+  {
+    "id": "livingdanang",
+    "name": "Living Da Nang",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://livingdanang.com/"
+  },
+  {
+    "id": "fidovn",
+    "name": "FidoVN Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://fidovn.com/bat-dong-san"
+  },
+  {
+    "id": "staybook",
+    "name": "Staybook Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://staybook.vn/"
+  },
+  {
+    "id": "revoland",
+    "name": "Revoland Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://www.revoland.vn/thue-can-ho-mini-thanh-pho-da-nang-moi"
+  },
+  {
+    "id": "bdsnhapho",
+    "name": "BĐS Nhà Phố Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://bdsnhapho.net/"
+  },
+  {
+    "id": "batdongsandanang",
+    "name": "Bất động sản Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://batdongsandanang.com.vn/"
+  },
+  {
+    "id": "nestvn",
+    "name": "NEST Vietnam Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://nestvn.vn/en/da-nang/apartments"
+  },
+  {
+    "id": "room4rentdanang",
+    "name": "Room4Rent Da Nang",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "legal_review",
+    "start_url": "https://room4rentdanang.com/"
+  },
+  {
+    "id": "myviethouse",
+    "name": "MyVietHouse Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://myviethouse.com/vi/cho-thue/da-nang"
+  },
+  {
+    "id": "danangdanang",
+    "name": "Da Nang Da Nang Marketplace",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://danangdanang.com/rent"
+  },
+  {
+    "id": "danaproperty",
+    "name": "DanaProperty",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://danaproperty.vn/"
+  },
+  {
+    "id": "mvpvietnam",
+    "name": "MVP Vietnam",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://www.mvpvietnam.com/"
+  },
+  {
+    "id": "dananglandlord",
+    "name": "Da Nang Landlord",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://dananglandlord.com/"
+  },
+  {
+    "id": "nestliving",
+    "name": "Nest Living Đà Nẵng",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://nestliving.vn/da-nang"
+  },
+  {
+    "id": "danangmls",
+    "name": "DaNangMLS",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "partner_required",
+    "start_url": "https://danangmls.com/"
+  },
+  {
+    "id": "apartment-vn",
+    "name": "Apartment.vn Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://apartment.vn/apartments-for-rent-da-nang/"
+  },
+  {
+    "id": "serviced-apartment-danang",
+    "name": "Serviced Apartment Da Nang",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://servicedapartmentdanang.com/"
+  },
+  {
+    "id": "telegram-channels",
+    "name": "Telegram · Kênh đã thêm bot",
+    "kind": "manual",
+    "connector_type": "community_api",
+    "integration_status": "partner_required",
+    "start_url": "https://core.telegram.org/bots/api"
+  },
+  {
+    "id": "green-residence",
+    "name": "Green Residence Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "partner_required",
+    "start_url": "https://greenresidence.vn/long-stay/"
+  },
+  {
+    "id": "kenhbds",
+    "name": "Kênh Bất Động Sản · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://kenhbds.com/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "nhadat-net",
+    "name": "Nhà Đất Net · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://nhadat.net/cho-thue-phong-tro-nha-tro-da-nang/"
+  },
+  {
+    "id": "nhatro247",
+    "name": "Nhà Trọ 247 · Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://nhatro247.com/thue-phong-tro-da-nang"
+  },
+  {
+    "id": "chothuenhatro",
+    "name": "Cho Thuê Nhà Trọ VN · Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://chothuenhatro.com/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "thuenha-net",
+    "name": "Thuê Nhà Net · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://thuenha.net/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "sosanhnha",
+    "name": "So Sánh Nhà · Cho thuê phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://sosanhnha.com/cho-thue-phong-tro-nha-tro-da-nang"
+  },
+  {
+    "id": "dothi-net",
+    "name": "Đô Thị Net · Nhà trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://dothi.net/nha-dat-cho-thue-da-nang.html"
+  },
+  {
+    "id": "bannhadanang",
+    "name": "Bán & Thuê Nhà Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://bannhadanang.net/cho-thue-nha-tro-phong-tro-da-nang"
+  },
+  {
+    "id": "ibatdongsan",
+    "name": "iBất Động Sản · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://i-batdongsan.com/cho-thue-phong-tro-nha-tro-da-nang/"
+  },
+  {
+    "id": "nhadatdanang-info",
+    "name": "Nhà Đất Đà Nẵng Info",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://nhadatdanang.info/cho-thue-phong-tro-nha-tro-da-nang"
+  },
+  {
+    "id": "danangland",
+    "name": "Đà Nẵng Land · Thuê trọ & Căn hộ",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://danangland.org/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "batdongsan321",
+    "name": "Bất Động Sản 321 · Phòng trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://batdongsan321.com/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "landviet",
+    "name": "Land Việt · Thuê trọ Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://landviet.com.vn/"
+  },
+  {
+    "id": "phongtot",
+    "name": "Phòng Tốt Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://phongtot.vn/"
+  },
+  {
+    "id": "nhadatvietnam",
+    "name": "Nhà Đất Việt Nam · Đà Nẵng",
+    "kind": "scrapy",
+    "connector_type": "html_static",
+    "integration_status": "ready",
+    "start_url": "https://nhadatvietnam.vn/cho-thue-phong-tro-da-nang"
+  },
+  {
+    "id": "fb-group-danang-01",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #01 (3806179476123128)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://www.facebook.com/groups/3806179476123128"
+  },
+  {
+    "id": "fb-group-danang-02",
+    "name": "AI Bot · FB Trọ Đà Nẵng #02 (trodanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "http://web.facebook.com/groups/trodanang/"
+  },
+  {
+    "id": "fb-group-danang-03",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #03 (1234115440490519)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/1234115440490519/"
+  },
+  {
+    "id": "fb-group-danang-04",
+    "name": "AI Bot · FB Phố Trọ Đà Nẵng #04 (photrodanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/photrodanang/"
+  },
+  {
+    "id": "fb-group-danang-05",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #05 (135387840570715)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/135387840570715/"
+  },
+  {
+    "id": "fb-group-danang-06",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #06 (382181642415026)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/382181642415026/"
+  },
+  {
+    "id": "fb-group-danang-07",
+    "name": "AI Bot · FB Căn Hộ Đà Nẵng #07 (canhodanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/canhodanang/"
+  },
+  {
+    "id": "fb-group-danang-08",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #08 (3230285527248786)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/3230285527248786/"
+  },
+  {
+    "id": "fb-group-danang-09",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #09 (693159467696345)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/693159467696345/"
+  },
+  {
+    "id": "fb-group-danang-10",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #10 (366979090908073)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/366979090908073/"
+  },
+  {
+    "id": "fb-group-danang-11",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #11 (1832789293868973)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/1832789293868973/"
+  },
+  {
+    "id": "fb-group-danang-12",
+    "name": "AI Bot · FB Phòng Trọ Căn Hộ Nhà Đà Nẵng #12 (phongtrocanhonhadanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/phongtrocanhonhadanang/"
+  },
+  {
+    "id": "fb-group-danang-13",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #13 (1024411125428289)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/1024411125428289/"
+  },
+  {
+    "id": "fb-group-danang-14",
+    "name": "AI Bot · FB Phòng Trọ Thanh Khê Đà Nẵng #14 (phongtrothanhkhedanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/phongtrothanhkhedanang/"
+  },
+  {
+    "id": "fb-group-danang-15",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #15 (1219928222295465)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/1219928222295465/"
+  },
+  {
+    "id": "fb-group-danang-16",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #16 (509310282869385)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/509310282869385/"
+  },
+  {
+    "id": "fb-group-danang-17",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #17 (1884611038718806)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/1884611038718806/"
+  },
+  {
+    "id": "fb-group-danang-18",
+    "name": "AI Bot · FB Group Đà Nẵng #18 (baohoxemay)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/baohoxemay/"
+  },
+  {
+    "id": "fb-group-danang-19",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #19 (7490089474437772)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/7490089474437772/"
+  },
+  {
+    "id": "fb-group-danang-20",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng VIP #20 (phongtrodanangvip)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/phongtrodanangvip/"
+  },
+  {
+    "id": "fb-group-danang-21",
+    "name": "AI Bot · FB Phòng Trọ Hải Châu Đà Nẵng #21 (phongtrohaichaudanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/phongtrohaichaudanang/"
+  },
+  {
+    "id": "fb-group-danang-22",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #22 (598456319055429)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/598456319055429/"
+  },
+  {
+    "id": "fb-group-danang-23",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #23 (833843313788409)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/833843313788409/"
+  },
+  {
+    "id": "fb-group-danang-24",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #24 (3806179476123128)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/3806179476123128/"
+  },
+  {
+    "id": "fb-group-danang-25",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng VNN #25 (phongtrodanang.vnn)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/phongtrodanang.vnn/"
+  },
+  {
+    "id": "fb-group-danang-26",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #26 (31450852267861437)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/31450852267861437/"
+  },
+  {
+    "id": "fb-group-danang-27",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #27 (728946289449167)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/728946289449167/"
+  },
+  {
+    "id": "fb-group-danang-28",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #28 (962109014328186)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/962109014328186/"
+  },
+  {
+    "id": "fb-group-danang-29",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #29 (483082967583489)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/483082967583489/"
+  },
+  {
+    "id": "fb-group-danang-30",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #30 (2056621844738215)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/2056621844738215/"
+  },
+  {
+    "id": "fb-group-danang-31",
+    "name": "AI Bot · FB Cho Thuê Căn Hộ & Phòng Trọ Đà Nẵng #31 (chothuecanhovaphongtrodanang)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/chothuecanhovaphongtrodanang/"
+  },
+  {
+    "id": "fb-group-danang-32",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #32 (266345997680925)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/266345997680925/"
+  },
+  {
+    "id": "fb-group-danang-33",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #33 (281184089051767)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/281184089051767/"
+  },
+  {
+    "id": "fb-group-danang-34",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #34 (478421727661885)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/478421727661885/"
+  },
+  {
+    "id": "fb-group-danang-35",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #35 (387838119833428)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/387838119833428/"
+  },
+  {
+    "id": "fb-group-danang-36",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #36 (583809553494777)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/583809553494777/"
+  },
+  {
+    "id": "fb-group-danang-37",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #37 (662548234201085)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/662548234201085/"
+  },
+  {
+    "id": "fb-group-danang-38",
+    "name": "AI Bot · FB Phòng Trọ Đà Nẵng #38 (703855326676795)",
+    "kind": "playwright",
+    "connector_type": "html_playwright",
+    "integration_status": "ready",
+    "start_url": "https://web.facebook.com/groups/703855326676795/"
+  }
+]

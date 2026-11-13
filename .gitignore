@@ -1,0 +1,46 @@
+# Environment variables and local credentials
+.env
+.env.*
+!.env.example
+!.env.docker.example
+!**/.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / frontend
+node_modules/
+dist/
+coverage/
+.vite/
+playwright-report/
+test-results/
+
+# Runtime data
+*.db
+*.sqlite
+*.sqlite3
+backend/uploads/
+cookies/*
+!cookies/README.md
+celerybeat-schedule*
+*.log
+
+# Internal QA and generated report renders
+artifacts/
+docs/rendered_report/
+docs/report_assets/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

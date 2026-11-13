@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Token màu đồng bộ với biến Figma (Light) và dark/* (Dark). Dạng "R G B" để Tailwind hỗ trợ độ trong suốt. */
+:root {
+  --bg-canvas: 246 248 252;
+  --bg-surface: 255 255 255;
+  --bg-muted: 238 242 247;
+  --border: 226 232 240;
+  --border-strong: 203 213 225;
+  --text: 15 23 42;
+  --text-2: 71 85 105;
+  --text-3: 100 116 139;
+  --on-primary: 255 255 255;
+  --primary: 234 88 12;
+  --primary-700: 194 65 12;
+  --primary-100: 255 237 213;
+  --primary-50: 255 247 237;
+  --accent: 15 118 110;
+  --accent-50: 240 253 250;
+  --accent-800: 17 94 89;
+  --violet: 124 58 237;
+  --violet-50: 245 243 255;
+  --success: 21 128 61;
+  --success-50: 240 253 244;
+  --warning: 180 83 9;
+  --warning-50: 255 251 235;
+  --danger: 185 28 28;
+  --danger-50: 254 242 242;
+  --aurora-1: 253 186 116;
+  --aurora-2: 196 181 253;
+  --aurora-3: 255 237 213;
+  --water: 219 234 254;
+  color-scheme: light;
+}
+
+.dark {
+  --bg-canvas: 15 17 21;
+  --bg-surface: 24 27 34;
+  --bg-muted: 35 39 51;
+  --border: 44 49 60;
+  --border-strong: 64 71 86;
+  --text: 243 244 246;
+  --text-2: 182 189 200;
+  --text-3: 138 147 163;
+  --primary-700: 251 146 60;
+  --primary-100: 58 35 22;
+  --primary-50: 37 25 15;
+  --accent: 45 212 191;
+  --accent-50: 14 41 38;
+  --accent-800: 94 234 212;
+  --violet: 167 139 250;
+  --violet-50: 34 27 56;
+  --success: 74 222 128;
+  --success-50: 16 38 26;
+  --warning: 251 191 36;
+  --warning-50: 43 34 16;
+  --danger: 248 113 113;
+  --danger-50: 46 22 24;
+  --aurora-1: 154 52 18;
+  --aurora-2: 76 29 149;
+  --aurora-3: 58 35 22;
+  --water: 23 32 51;
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: rgb(var(--bg-canvas));
+  color: rgb(var(--text));
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-xl border border-line bg-surface shadow-sm;
+  }
+  .label-s {
+    @apply text-[13px] font-semibold;
+  }
+  .caption {
+    @apply text-xs text-ink-3;
+  }
+  .skeleton {
+    background: linear-gradient(90deg, rgb(var(--bg-muted)) 0%, rgb(var(--bg-surface)) 50%, rgb(var(--bg-muted)) 100%);
+    background-size: 800px 100%;
+    @apply animate-shimmer;
+  }
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+}
+
+/* Bản đồ Leaflet: ghim giá */
+.leaflet-container {
+  font-family: inherit;
+  background: rgb(var(--water));
+}
+.price-pin {
+  @apply flex flex-col items-center whitespace-nowrap rounded-full border border-line bg-surface px-3 py-1 text-[13px] font-semibold leading-tight text-ink shadow-md;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.price-pin.is-active {
+  @apply border-primary bg-primary text-on-primary shadow-glow;
+  transform: translate(-50%, -50%) scale(1.12);
+}
+.price-pin-distance {
+  @apply mt-0.5 text-[10px] font-medium text-primary-700;
+}
+.price-pin.is-active .price-pin-distance {
+  @apply text-on-primary;
+}
+.school-pin {
+  @apply flex items-center gap-1.5 whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-canvas shadow-md;
+  transform: translate(-50%, -50%);
+}
+.user-location-pin {
+  @apply relative flex h-6 w-6 items-center justify-center rounded-full border-[3px] border-white bg-primary shadow-lg;
+}
+.user-location-pin::before {
+  content: "";
+  @apply absolute h-9 w-9 animate-ping rounded-full bg-primary/25;
+}
+.user-location-pin > span {
+  @apply relative h-2.5 w-2.5 rounded-full bg-white;
+}
+.archipelago-pin {
+  @apply flex w-max items-center gap-2 whitespace-nowrap rounded-lg border-2 border-primary bg-surface/95 px-3 py-2 text-left text-ink shadow-lg backdrop-blur;
+  transform: translate(-50%, -50%);
+}
+.archipelago-pin > span {
+  @apply h-3 w-3 shrink-0 rounded-full border-2 border-white bg-primary shadow-sm;
+}
+.archipelago-pin strong,
+.archipelago-pin small {
+  @apply block;
+}
+.archipelago-pin strong {
+  @apply text-xs font-bold;
+}
+.archipelago-pin small {
+  @apply mt-0.5 text-[10px] font-medium text-ink-2;
+}
+.archipelago-feature {
+  cursor: help;
+  transition: stroke-width 0.15s ease, fill-opacity 0.15s ease;
+}
+.archipelago-feature:hover {
+  fill-opacity: 1;
+  stroke-width: 3;
+}
+.archipelago-feature-tooltip {
+  @apply rounded-lg border border-primary/30 bg-surface/95 px-3 py-2 text-ink shadow-lg backdrop-blur;
+}
+.archipelago-feature-tooltip-content,
+.archipelago-feature-tooltip-content strong,
+.archipelago-feature-tooltip-content small {
+  @apply block;
+}
+.archipelago-feature-tooltip-content strong {
+  @apply text-xs font-bold;
+}
+.archipelago-feature-tooltip-content small {
+  @apply mt-0.5 whitespace-nowrap text-[10px] font-medium text-ink-2;
+}
+.leaflet-tooltip-top.archipelago-feature-tooltip::before {
+  border-top-color: rgb(var(--surface));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
